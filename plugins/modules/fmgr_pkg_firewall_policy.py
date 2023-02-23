@@ -230,7 +230,7 @@ options:
                     - 'disable'
                     - 'enable'
             dstaddr:
-                type: str
+                type: list
                 description: no description
             dstaddr-negate:
                 type: str
@@ -239,7 +239,7 @@ options:
                     - 'disable'
                     - 'enable'
             dstintf:
-                type: str
+                type: list
                 description: no description
             firewall-session-dirty:
                 type: str
@@ -485,7 +485,7 @@ options:
                 type: str
                 description: no description
             srcaddr:
-                type: str
+                type: list
                 description: no description
             srcaddr-negate:
                 type: str
@@ -494,7 +494,7 @@ options:
                     - 'disable'
                     - 'enable'
             srcintf:
-                type: str
+                type: list
                 description: no description
             ssl-mirror:
                 type: str
@@ -786,7 +786,7 @@ options:
                 type: str
                 description: no description
             dstaddr6:
-                type: str
+                type: list
                 description: no description
             geoip-match:
                 type: str
@@ -807,7 +807,7 @@ options:
                 type: str
                 description: no description
             srcaddr6:
-                type: str
+                type: list
                 description: no description
             file-filter-profile:
                 type: str
@@ -1519,7 +1519,7 @@ def main():
                         '7.0.0': True,
                         '7.2.0': True
                     },
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'dstaddr-negate': {
                     'required': False,
@@ -1553,7 +1553,7 @@ def main():
                         '7.0.0': True,
                         '7.2.0': True
                     },
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'firewall-session-dirty': {
                     'required': False,
@@ -2410,7 +2410,7 @@ def main():
                         '7.0.0': True,
                         '7.2.0': True
                     },
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'service-negate': {
                     'required': False,
@@ -2474,7 +2474,7 @@ def main():
                         '7.0.0': True,
                         '7.2.0': True
                     },
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'srcaddr-negate': {
                     'required': False,
@@ -2508,7 +2508,7 @@ def main():
                         '7.0.0': True,
                         '7.2.0': True
                     },
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'ssl-mirror': {
                     'required': False,
@@ -3628,7 +3628,7 @@ def main():
                         '7.0.0': True,
                         '7.2.0': True
                     },
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'geoip-match': {
                     'required': False,
@@ -3698,7 +3698,7 @@ def main():
                         '7.0.0': True,
                         '7.2.0': True
                     },
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'file-filter-profile': {
                     'required': False,

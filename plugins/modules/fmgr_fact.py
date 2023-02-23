@@ -5471,10 +5471,13 @@ def main():
         },
         'system_route6': {
             'params': [
-                'route6'
+                'route6',
+                'device',
+                'vdom'
             ],
             'urls': [
-                '/cli/global/system/route6/{route6}'
+                '/cli/global/system/route6/{route6}',
+                '/pm/config/device{device}/vdom/{vdom}/router6/static'
             ],
             'revision': {
                 '6.0.0': True,
@@ -5484,8 +5487,26 @@ def main():
                 '6.4.0': True,
                 '6.4.2': True,
                 '6.4.5': True,
-                '7.0.0': True,
-                '7.2.0': True
+                '7.0.0': True
+            }
+        },
+        'vdom_route6': {
+            'params': [
+                'device',
+                'vdom'
+            ],
+            'urls': [
+                '/pm/config/device/{device}/vdom/{vdom}/router/static6'
+            ],
+            'revision': {
+                '6.0.0': True,
+                '6.2.1': True,
+                '6.2.3': True,
+                '6.2.5': True,
+                '6.4.0': True,
+                '6.4.2': True,
+                '6.4.5': True,
+                '7.0.0': True
             }
         },
         'voip_profile': {
@@ -8584,10 +8605,29 @@ def main():
         },
         'system_route': {
             'params': [
-                'route'
+                'route',
             ],
             'urls': [
-                '/cli/global/system/route/{route}'
+                '/cli/global/system/route/{route}',
+            ],
+            'revision': {
+                '6.0.0': True,
+                '6.2.1': True,
+                '6.2.3': True,
+                '6.2.5': True,
+                '6.4.0': True,
+                '6.4.2': True,
+                '6.4.5': True,
+                '7.0.0': True
+            }
+        },
+        'vdom_route': {
+            'params': [
+                'device',
+                'vdom'
+            ],
+            'urls': [
+                '/pm/config/device/{device}/vdom/{vdom}/router/static'
             ],
             'revision': {
                 '6.0.0': True,
@@ -18691,6 +18731,7 @@ def main():
                         'system_snmp_user',
                         'system_performance',
                         'system_route6',
+                        'vdom_route6',
                         'voip_profile',
                         'voip_profile_sccp',
                         'voip_profile_sip',
@@ -18840,6 +18881,7 @@ def main():
                         'webproxy_profile_headers',
                         'webproxy_wisp',
                         'system_route',
+                        'vdom_route',
                         'dvmdb_script',
                         'dvmdb_script_scriptschedule',
                         'dvmdb_script_log_latest',
